@@ -14,12 +14,6 @@ provider "spacelift" {
 # Define a list of AWS account IDs from an environment variable or as a variable
 
 
-# Define Spacelift space ID
-variable "spacelift_space_id" {
-  description = "The Spacelift stack to associate AWS accounts with"
-  type        = string
-}
-
 # Create multiple AWS integrations dynamically
 resource "spacelift_aws_integration" "developer_aws" {
   for_each = toset(var.aws_account_ids)  # Iterate over each account ID
