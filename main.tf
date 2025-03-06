@@ -12,11 +12,7 @@ provider "spacelift" {
 }
 
 # Define a list of AWS account IDs from an environment variable or as a variable
-variable "aws_account_ids" {
-  description = "List of AWS Account IDs for integration"
-  type        = list(string)
-  default     = []  # Keep it empty initially
-}
+
 
 # Define Spacelift space ID
 variable "spacelift_space_id" {
